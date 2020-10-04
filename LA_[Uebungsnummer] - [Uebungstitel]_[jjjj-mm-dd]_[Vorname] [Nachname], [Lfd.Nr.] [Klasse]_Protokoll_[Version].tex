@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Filename:           LA_[Uebungsnummer] - [Uebungstitel]_[jjjj-mm-dd]_[Vorname] [Nachname], [Lfd.Nr.] [Klasse]_Protokoll_[Version].tex
+% Autor:              Paul Raffer                              %
+% Zuletzt bearbeitet: 2020-10-04                               %
+% Beschreibung:       In diesem File werden die benötigten     %
+%                     Packages und die anderen LaTeX-Files     %
+%                     (macros.tex, titlepage.tex, content.tex) %
+%                     inkludiert.                              %
+%                                                              %
+%                     DIESES FILE MUSS IM NORMALFALL NICHT     %
+%                     BEARBEITET WERDEN!!!                     %
+%                                                              %
+%                     DIESES FILE MUSS KOMPILIERT WERDEN UM    %
+%                     DAS FERTIGE PROTOKOLL ALS OUTPUT ZU      %
+%                     ERHALTEN!                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper]{article}
+
+\usepackage{lastpage}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amssymb}
+%\usepackage{extarrows}
+\usepackage{float}
+
+\usepackage{dcolumn}
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+
+\usepackage{array}
+\newcolumntype{$}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+	#1\ignorespaces
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\lstdefinelanguage
+	[CortexM3]{Assembler}
+	[x86masm]{Assembler}
+	{morekeywords={
+		AREA,READONLY,EXPORT,DCB,LDR,BEQ,CBNZ,CBZ,BFI,BNE,B,ORR,ALIGN,BIC,UDIV,STRH,DCD,TST,LDRB,
+	}}
+	
+\lstset{
+	tabsize=4,
+	keywordstyle=\color{green},
+	commentstyle=\color{gray},
+	stringstyle=\color{blue},
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{macros.tex}
+
+\begin{document}
+	\input{titlepage.tex}
+	\input{content.tex}
+\end{document}

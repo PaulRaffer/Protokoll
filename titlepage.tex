@@ -1,0 +1,97 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Filename:           titlepage.tex                            %
+% Autor:              Paul Raffer                              %
+% Zuletzt bearbeitet: 2020-10-04                               %
+% Beschreibung:       erste Seite des Protokolls, Algemeiner   %
+%                     Teil und Inhaltsverzeichnis              %
+%                                                              %
+%                     DIESES FILE MUSS IM NORMALFALL NICHT     %
+%                     BEARBEITET WERDEN!!!                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+
+	\begin{flushright}
+		\includegraphics[width=2cm]{res/img/\schulelogo}
+	\end{flushright}
+
+	\begin{center}
+		\begin{spacing}{3}
+		{\LARGE{\bfseries{\schulelangname}}}
+		\end{spacing}
+		{\LARGE \schuleabteilung}
+	\end{center}
+
+	\begin{table}[h]
+		\renewcommand{\arraystretch}{1.4}
+		\begin{tabularx}{\textwidth}{|$X@{\hspace{7mm}}|^X|^X|}
+			\hline
+			Klasse / Jahrgang:                           & Gruppe:                    & Übungsleiter:                                                                                                                       \\
+			\rowstyle{\large} \raggedleft \klasse        & \centering \gruppe         & \hspace{7mm}\uebungsleiter                                                                                                          \\
+			\hline
+			Übungsnummer:                                & \multicolumn{2}{l|}{Übungstitel:}                                                                                                                                \\
+			\rowstyle{\large} \raggedleft \uebungsnummer & \multicolumn{2}{l|}{\hspace{2cm}{\large \uebungstitel}}                                                                                                          \\
+			\hline
+			Datum der Übung:                             & \multicolumn{2}{l|}{Teilnehmer:}                                                                                                                                 \\
+			\rowstyle{\large} \raggedleft \uebungsdatum  & \multicolumn{2}{l|}{\hspace{2cm}{\large \uebungsteilnehmerInachname, \uebungsteilnehmerIInachname, \uebungsteilnehmerIIInachname, \uebungsteilnehmerIVnachname}} \\
+			\hline
+			Datum der Abgabe:                            & Schriftführer:             & Unterschrift:                                                                                                                       \\
+			\rowstyle{\large} \raggedleft \abgabedatum   & \centering \schriftfuehrer &                                                                                                                                     \\
+			\hline
+		\end{tabularx}
+	\end{table}
+
+
+	\begin{table}[h]
+		\renewcommand{\arraystretch}{1.3}
+		\raggedleft
+		{\large
+		\begin{tabular}{l| p{0.6cm} |l}
+			\multicolumn{2}{l|}{}            & Beurteilung \\\hline
+			Deckbl., Inhaltsverz.          & &             \\\hline
+			Aufgabenstellung               & &             \\\hline
+			Dokumentation                  & &             \\\hline
+			\hspace{5mm}Messschaltungen    & &             \\\hline
+			\hspace{5mm}Messtabellen       & &             \\\hline
+			\hspace{5mm}Berechnungen       & &             \\\hline
+			\hspace{5mm}Programmlistings   & &             \\\hline
+			Auswerung                      & &             \\\hline
+			\hspace{5mm}Diagramme          & &             \\\hline
+			\hspace{5mm}Berechnungen       & &             \\\hline
+			\hspace{5mm}Simulationen       & &             \\\hline
+			\hspace{5mm}Schlussfolgerungen & &             \\\hline
+			\hspace{5mm}Kommentare         & &             \\\hline
+			Inventarliste                  & &             \\\hline
+			Messprotokoll                  & &             \\\hline
+			Form                           & &             \\\hline
+			\multicolumn{2}{l|}{Summe}       &             \\
+		\end{tabular}
+		}
+	\end{table}
+\end{titlepage}
+
+\section*{Allgemeiner Teil}
+
+\begin{table}[h]
+	{\large
+	\begin{tabular}{ll}
+		Titel der Übung:            & \uebungstitel                      \\
+		Übungsleiter:               & \uebungsleiter                     \\
+		Übungsnummer:               & \uebungsnummer                     \\
+		Übungsplatz:                & \labor\ / \nummerderabnahmeeinheit \\
+		Datum der Übung:            & \uebungsdatum                      \\
+		Klasse:                     & \klasse                            \\
+		Schriftführer:              & \schriftfuehrer                    \\
+		Übungsteilnehmer:           & \uebungsteilnehmerI                \\
+									& \uebungsteilnehmerII               \\
+									& \uebungsteilnehmerIII              \\
+									& \uebungsteilnehmerIV               \\
+		Abwesende Übungsteilnehmer: \abwesendeuebungsteilnehmer
+
+	\end{tabular}
+	}
+\end{table}
+
+\tableofcontents
+
+\newpage

@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Filename:           content.tex                              %
+% Autor:              Paul Raffer                              %
+% Zuletzt bearbeitet: 2020-10-04                               %
+% Beschreibung:       In dieses File wird der eigentliche      %
+%                     Inhalt des Protokolls geschrieben.       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Theorie zur Übung}
+	<kurzer Theorieteil - Hinweis auf Besonderheiten>
+	
+
+\section{Titel - Übungsaufgabe 1}
+
+	\subsection{Aufgabenstellung}
+		<Gegeben ist, Gesucht ist, als Text angeben>
+		
+	\subsection{Berechnung}
+		<Dimensionierung/Berechnung Schaltung, Simulationen, Messbereichsabschätzungen>
+		
+	\subsection{Messschaltung}
+		<Schaltung, eingestellte Messbereiche, BMKZ -> Zuordnung zu Inventarliste>
+		
+	\subsection{Messvorgang}
+		<was ist zu beachten, was/wie wird eingestellt, Einschalt-Reichenfolge, Ausschalt-Reihenfolge>
+		
+	\subsection{Messtabelle}
+		<Messtabelle, Bezeichnung der Mess- Einstellgrößen laut Messschaltung, Einheiten, verwendete Formeln, Beispielrechnung mit Einheiten>
+		
+	\subsection{Diagramm}
+		<Grafische Auswertung, Kommentare zu Besonderheiten/Abweichungen zur Theorie-Erwartung>
+		
+	\subsection{Ergebnis}
+		<verbales Ergebnis / verbale Erkenntnis aus Übung 1>
+		
+	
+\section{Abschließende Bemerkungen}
+	<Besondere Vorkommmisse während der Übung (z.B.: Feueralarm, NOT-AUS), besondere Erkenntnisse, Verbesserungsvorschläge>
+	
+
+% ACHTUNG: FÜR DEN ANHANG KÖNNEN VON LaTeX LEIDER NICHT DIE RICHTIGEN SEITENZAHLEN ERMITTELT WERDEN!
+% DESHALB MÜSSEN DIESE NACH DEM KOMPILIEREN MANUELL IN DER DATEI
+% "LA_[Uebungsnummer] - [Uebungstitel]_[jjjj-mm-dd]_[Vorname] [Nachname], [Lfd.Nr.] [Klasse]_Protokoll_[Version].toc"
+% ANGEPASST WERDEN! (Dazu muss der Wert in den letzten geschwungenen Klammern der Zeile verändert werden)
+% ANSCHLIESSEND MUSS DIE DATEI GESPEICHERT UND DAS PROTOKOLL NEU KOMPILIERT WERDEN
+
+\addcontentsline{toc}{section}{Anhang}                                          % Die section Anhang wird zum Inhaltsverzeichnis hinzugefügt
+	\addcontentsline{toc}{subsection}{Datenblatt XY}                            % Wenn keine Datenblätter benötigt werden kann diese Zeile entfernt werden
+	\addcontentsline{toc}{subsection}{Messprotokoll (Mitschrift bei der Übung)}
+	\addcontentsline{toc}{subsection}{Inventarliste}
+
+%\includepdf[pages={<Seitenzahlen>}]{res/doc/Datenblätter/XY.pdf} % Nur wenn ein Datenblatt eingebunden werden soll
+\includepdf[pages=-]{res/doc/\messprotokoll} % Wenn das original Messprotokoll nach dem Ausdrucken dazugeheftet wird MUSS diese Zeile entfernt werden
+\includepdf[pages=-]{res/doc/\inventarliste}

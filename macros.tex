@@ -1,0 +1,40 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Filename:           macros.tex                               %
+% Autor:              Paul Raffer                              %
+% Zuletzt bearbeitet: 2020-10-04                               %
+% Beschreibung:       In diesem File können die Werte von der  %
+%                     Makros festgelegt werden.                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\schulekurzname}             {<Abkürzung der Schule>}
+\newcommand{\schulelangname}             {<Name der Schule>}
+\newcommand{\schuleabteilung}            {<Abteilung>}
+\newcommand{\schulelogo}                 {schule_logo.png}   % Schullogo unter "./res/img/schule_logo.pdf" abspeichern
+
+
+\newcommand{\uebungstitel}               {<Übungstitel laut Laborplan>}
+\newcommand{\uebungsnummer}              {<Übungsnummer>}
+\newcommand{\uebungsleiter}              {<Name Übungsleiter>}
+\newcommand{\labor}                      {<Labor>}
+\newcommand{\nummerderabnahmeeinheit}    {<Nr. Abnahmeeinheit>}
+\newcommand{\uebungsdatum}               {<jjjj-mm-dd>}
+\newcommand{\abgabedatum}                {<jjjj-mm-dd>}
+\newcommand{\klasse}                     {<xABHEL>}
+\newcommand{\gruppe}                     {<?a/?b>}
+\newcommand{\uebungsteilnehmerIvorname}  {<Vname1>} \newcommand{\uebungsteilnehmerInachname}  {<Nname1>} \newcommand{\uebungsteilnehmerI}  {\uebungsteilnehmerIvorname\ \uebungsteilnehmerInachname}
+\newcommand{\uebungsteilnehmerIIvorname} {<Vname2>} \newcommand{\uebungsteilnehmerIInachname} {<Nname2>} \newcommand{\uebungsteilnehmerII} {\uebungsteilnehmerIIvorname\ \uebungsteilnehmerIInachname}
+\newcommand{\uebungsteilnehmerIIIvorname}{<Vname3>} \newcommand{\uebungsteilnehmerIIInachname}{<Nname3>} \newcommand{\uebungsteilnehmerIII}{\uebungsteilnehmerIIIvorname\ \uebungsteilnehmerIIInachname}
+\newcommand{\uebungsteilnehmerIVvorname} {<Vname4>} \newcommand{\uebungsteilnehmerIVnachname} {<Nname4>} \newcommand{\uebungsteilnehmerIV} {\uebungsteilnehmerIVvorname\ \uebungsteilnehmerIVnachname}
+\newcommand{\schriftfuehrervorname}      {<VnameX>} \newcommand{\schriftfuehrernachname}      {<NnameX>} \newcommand{\schriftfuehrer}      {\schriftfuehrervorname\ \schriftfuehrernachname}
+\newcommand{\abwesendeuebungsteilnehmer} { & keiner \\ }     % Abwesende Übungsteilnehmer in LaTeX-Tabellenform (& = nächste Spalte; \\ = nächste Zeile) eintragen, wobei die erste Spalte immer leer bleibt und in der zweiten Spalte ein Name eines abwesenden Schülers pro Zeile eingetragen wird
+\newcommand{\schueler}                   {\schriftfuehrer}   % Zeile nicht verändern, außer du bist nicht der Schriftführer (z.B. Ersatzprotokoll)
+
+
+\newcommand{\messprotokoll}              {Messprotokoll.pdf} % Messprotokoll einscannen und unter "./res/doc/Messprotokoll.pdf" abspeichern ODER diese Zeile entfernen und das originale Messprotokoll nach dem Ausdrucken zum Protokoll dazuheften
+\newcommand{\inventarliste}              {Inventarliste.pdf} % Inventarliste unter "./res/doc/Inventarliste.pdf" abspeichern
+
+
+\lhead{\labor}                                             \rhead{\uebungstitel}
+\lfoot{\schulekurzname} \cfoot{\schueler\ / \klasse} \rfoot{Seite \thepage\ von \pageref{LastPage}}
+
+\author{\schriftfuehrer}
